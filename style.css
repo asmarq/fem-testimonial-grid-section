@@ -23,9 +23,16 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  margin: 0 auto;
+  grid-template-rows: repeat(5, auto);
   gap: 25px;
   padding: 70px 25px;
+  grid-template-areas:
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira";
 }
 
 section {
@@ -35,20 +42,25 @@ section {
 
 section:nth-child(1) {
   background-color: var(--violet);
+  grid-area: daniel;
 }
 section:nth-child(2) {
   background-color: var(--dk-gray-blue);
+  grid-area: jonathan;
 }
 
 section:nth-child(3) {
   background-color: var(--white);
+  grid-area: jeanette;
 }
 
 section:nth-child(4) {
   background-color: var(--dk-black-blue);
+  grid-area: patrick;
 }
 section:nth-child(5) {
   background-color: var(--white);
+  grid-area: kira;
 }
 
 .profil {
@@ -100,10 +112,27 @@ section:nth-child(5) .testimonial {
   color: hsla(217, 19%, 35%, 0.5);
 }
 
+section:nth-child(4) .profil__picture {
+  border: 2px solid var(--violet);
+}
+
+/* .quotation-marks {
+  position: absolute;
+} */
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 640px) {
+  main {
+    max-width: 1100px;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+  }
 }
