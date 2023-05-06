@@ -18,6 +18,86 @@
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 13px;
+  background-color: var(--light-blue);
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 25px;
+  padding: 70px 25px;
+}
+
+section {
+  border-radius: 6px;
+  padding: 25px 30px;
+}
+
+section:nth-child(1) {
+  background-color: var(--violet);
+}
+section:nth-child(2) {
+  background-color: var(--dk-gray-blue);
+}
+
+section:nth-child(3) {
+  background-color: var(--white);
+}
+
+section:nth-child(4) {
+  background-color: var(--dk-black-blue);
+}
+section:nth-child(5) {
+  background-color: var(--white);
+}
+
+.profil {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profil img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid hsla(0, 0%, 81%, 0.5);
+}
+
+.name {
+  color: var(--white);
+}
+
+.graduate {
+  color: hsla(0, 0%, 81%, 0.5);
+}
+
+.quote {
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.testimonial {
+  color: hsla(0, 0%, 81%, 0.7);
+}
+
+section:nth-child(3) .name,
+section:nth-child(5) .name,
+section:nth-child(3) .quote,
+section:nth-child(5) .quote {
+  color: var(--dk-gray-blue);
+}
+
+section:nth-child(3) .graduate,
+section:nth-child(5) .graduate {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+
+section:nth-child(3) .testimonial,
+section:nth-child(5) .testimonial {
+  color: hsla(217, 19%, 35%, 0.5);
 }
 
 .attribution {
